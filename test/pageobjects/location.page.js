@@ -1,3 +1,5 @@
+const properties = require(`../properties/test.properties`)
+
 class LocationPage {
   get locationButton() {
     return $("[id=btnMyLocation]")
@@ -7,6 +9,10 @@ class LocationPage {
     const button = await this.locationButton
     await expect(button).toBeExisting()
     await button.click()
+  }
+
+  async open() {
+    await browser.url(properties.url)
   }
 }
 

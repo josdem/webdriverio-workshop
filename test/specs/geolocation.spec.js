@@ -3,7 +3,7 @@ const LocationPage = require("../pageobjects/location.page")
 
 describe("Checking locations", () => {
   it("goes from Ann Arbor to Guadalajara to Amsterdam", async () => {
-    await browser.url("https://www.where-am-i.net/")
+    await LocationPage.open()
     await browser.cdp("Emulation", "setGeolocationOverride", {
       latitude: 42.3173603,
       longitude: -83.6826172,
