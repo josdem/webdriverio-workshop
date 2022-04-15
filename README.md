@@ -26,9 +26,16 @@ npx prettier --write .
 #### To run the project
 
 ```bash
-npx wdio run wdio.conf.js
+npx wdio run wdio.conf.js --spec=test/specs/${testName}
 ```
+
+where `${testName}` could be:
+
+- geolocation.spec.js
+- lighthouse.spec.js
 
 #### Read this as reference
 
 - https://josdem.io/techtalk/ux/webdriverio_getting_started/
+- https://josdem.io/techtalk/ux/webdriverio_geolocation/
+- https://josdem.io/techtalk/ux/webdriverio_lighthouse/
