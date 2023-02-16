@@ -34,6 +34,11 @@ where `${testName}` could be:
 - geolocation.spec.js
 - lighthouse.spec.js
 
+If you want to generate [Allure Reports](https://webdriver.io/docs/allure-reporter/)
+
+- Install allure command line: `npm install -g allure-commandline --save-dev`
+- Execute this command: `allure generate && allure open`
+
 #### Read this as reference
 
 - https://josdem.io/techtalk/ux/webdriverio_getting_started/
