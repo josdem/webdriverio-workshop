@@ -6,8 +6,8 @@ This project shows cool features in [Webdriver.io](https://webdriver.io/) along 
 
 #### Requirements
 
-- [NodeJS](https://nodejs.org/en/) version: `v16.14.2`
-- [Chrome](https://www.google.com/chrome/) version: `100.0`
+- [NodeJS](https://nodejs.org/en/) version: `v16.19.0`
+- [Chrome](https://www.google.com/chrome/) version: `110.0`
 
 **Note:** I recommed to use [NVM](https://github.com/nvm-sh/nvm) to manage NodeJS versions
 
