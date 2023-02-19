@@ -26,8 +26,13 @@ npx prettier --write .
 #### To run the project
 
 ```bash
-npx wdio run wdio.conf.js --spec=test/specs/${testName}
+npx wdio run test/config/${configuration}.conf.js --spec=test/specs/${testName}
 ```
+
+where `${configuration}` could be:
+
+- chrome (to run tests require Chrome)
+- rest (to run API consumption tests)
 
 where `${testName}` could be:
 
