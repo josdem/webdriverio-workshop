@@ -1,5 +1,4 @@
 const assert = require("assert")
-const service = require("../services/smoothie")
 
 describe("consuming an RESTful API", () => {
   it("Getting categories from service", async () => {
