@@ -1,7 +1,8 @@
+const fetch = require("node-fetch")
 const properties = require(`../properties/test.properties`)
 
 let getCategories = async () => {
-  const url = `${properties.serviceUrl}/categories`
+  const url = `${properties.serviceUrl}/categories/`
   let result
 
   await fetch(url, {
