@@ -1,4 +1,3 @@
-const assert = require("assert")
 const properties = require(`../properties/test.properties`)
 
 describe("consuming an RESTful API", () => {
