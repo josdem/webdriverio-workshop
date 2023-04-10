@@ -5,7 +5,7 @@ const HomePage = require("../pageobjects/home.page")
 describe("intercepting search request", () => {
   it("opens home page", async () => {
     await HomePage.open()
-    await browser.url(properties.dominosUrl);
+    await browser.url(properties.dominosUrl)
     await browser.setupInterceptor()
   })
 
