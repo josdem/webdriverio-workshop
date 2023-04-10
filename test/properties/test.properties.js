@@ -2,6 +2,7 @@ module.exports = {
   url: "https://www.where-am-i.net/",
   website: "https://josdem.io/",
   serviceUrl: "https://webflux.josdem.io/",
+  dominosUrl: "https://dominos.josdem.io/",
   waitingTime: 3000,
   accuracy: 1,
   UNITED_STATES: {
