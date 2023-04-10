@@ -3,6 +3,7 @@ module.exports = {
   website: "https://josdem.io/",
   serviceUrl: "https://webflux.josdem.io/",
   amazonUrl: "https://www.amazon.com/",
+  amazonSuggestionsUrl: "https://completion.amazon.com/api/2017/suggestions",
   searchValue: "pizza",
   waitingTime: 3000,
   accuracy: 1,
