@@ -11,7 +11,6 @@ describe("intercepting search request", async () => {
 
   it("search pizza", async () => {
     await $("#twotabsearchtextbox").setValue("pizza")
-    await browser.pause(3000)
   })
 
   it("validate search request", async () => {
