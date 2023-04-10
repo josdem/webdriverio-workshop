@@ -3,26 +3,20 @@ const properties = require(`../properties/test.properties`)
 
 const HomePage = require("../pageobjects/home.page")
 
-describe("intercepting search request", () => {
+describe("intercepting search request", async () => {
   it("opens home page", async () => {
-    await HomePage.open()
-    await browser.url(properties.dominosUrl)
+    await browser.url("https://www.amazon.com/")
     await browser.setupInterceptor()
   })
 
-  it("sends zip code, city and state", async () => {
-    await HomePage.selectZipCodeCityAndState()
+  it("search pizza", async () => {
+    await $("#twotabsearchtextbox").setValue("pizza")
+    await browser.pause(3000)
   })
 
   it("validate search request", async () => {
-    await browser.expectRequest("POST", "https://dominos.josdem.io/search", 200)
-    await HomePage.clickOnSearchLocation()
-    await browser.pause(2000)
-    await browser.assertRequests()
-  })
-
-  it("validates service method title", async () => {
-    const title = await browser.getTitle()
-    assert.strictEqual(title, "Service Method")
+    const requests = await browser.getRequests("GET", "https://completion.amazon.com/api/2017/suggestions")
+    console.log("First request: " + JSON.stringify(requests[0]))
+    assert.ok(requests.length > 1, "expecting more than one response")
   })
 })
