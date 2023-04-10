@@ -1,16 +1,17 @@
 const assert = require("assert")
 const properties = require(`../properties/test.properties`)
 
-const HomePage = require("../pageobjects/home.page")
+const AmazonPage = require("../pageobjects/amazon.page")
 
 describe("intercepting search request", async () => {
   it("opens home page", async () => {
-    await browser.url("https://www.amazon.com/")
+    await AmazonPage.open()
     await browser.setupInterceptor()
   })
 
   it("search pizza", async () => {
-    await $("#twotabsearchtextbox").setValue("pizza")
+    const searchBox = await AmazonPage.searchTextBox()
+    await searchBox.setValue("pizza")
   })
 
   it("validate search request", async () => {
