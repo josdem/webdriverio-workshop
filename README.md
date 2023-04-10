@@ -39,6 +39,7 @@ where `${testName}` could be:
 - geolocation.spec.js
 - lighthouse.spec.js
 - service.spec.js
+- intercept.spec.js
 
 If you want to generate [Allure Reports](https://webdriver.io/docs/allure-reporter/)
 
