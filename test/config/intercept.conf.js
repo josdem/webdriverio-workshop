@@ -1,13 +1,12 @@
 const { config } = require("../../wdio.conf")
 
-config.services = config.services.concat(["intercept"])
+config.services = config.services.concat(["chromedriver", "intercept"])
 
 config.capabilities = [
   {
+    maxInstances: 5,
     browserName: "chrome",
-    "goog:chromeOptions": {
-      args: ["headless", "disable-gpu"],
-    },
+    acceptInsecureCerts: true,
   },
 ]
 
