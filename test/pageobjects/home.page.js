@@ -28,6 +28,9 @@ class HomePage {
     const state = await this.stateSelector
     expect(state).toBeExisting()
     state.click()
+  }
+
+  async clickOnSearchLocation() {
     const button = await this.searchLocationsButton
     expect(button).toBeExisting()
     button.click()

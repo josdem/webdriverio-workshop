@@ -11,7 +11,12 @@ describe("intercepting search request", () => {
 
   it("sends zip code, city and state", async () => {
     await HomePage.selectZipCodeCityAndState()
+  })
+
+  it("validate search request", async () => {
+    await browser.expectRequest("POST", "/search", 200)
+    await HomePage.clickOnSearchLocation()
     await browser.pause(2000)
-    await browser.expectRequest("GET", "/search", 400)
+    await browser.assertRequests()
   })
 })
