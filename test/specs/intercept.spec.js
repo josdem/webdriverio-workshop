@@ -12,6 +12,7 @@ describe("intercepting search request", async () => {
   it("search pizza", async () => {
     const searchBox = await AmazonPage.searchTextBox
     await searchBox.setValue(properties.searchValue)
+    await browser.pause(properties.waitingTime)
   })
 
   it("validate search request", async () => {
