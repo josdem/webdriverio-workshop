@@ -7,7 +7,7 @@ This project shows cool features in [Webdriver.io](https://webdriver.io/) along 
 #### Requirements
 
 - [NodeJS](https://nodejs.org/en/) version: `v18.16.0`
-- [Chrome](https://www.google.com/chrome/) version: `112.0`
+- [Chrome](https://www.google.com/chrome/) version: `113.0`
 
 **Note:** I recommed to use [NVM](https://github.com/nvm-sh/nvm) to manage NodeJS versions
 
@@ -33,6 +33,7 @@ where `${configuration}` could be:
 
 - chrome (to run tests require Chrome)
 - rest (to run API consumption tests)
+- image (to run image comparison test)
 
 where `${testName}` could be:
 
@@ -40,6 +41,7 @@ where `${testName}` could be:
 - lighthouse.spec.js
 - service.spec.js
 - intercept.spec.js
+- image.comparison.spec.js
 
 If you want to generate [Allure Reports](https://webdriver.io/docs/allure-reporter/)
 
