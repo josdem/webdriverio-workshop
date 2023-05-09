@@ -1,6 +1,8 @@
-describe("Example", () => {
+const properties = require(`../properties/test.properties`)
+
+describe("Doing image comparison", () => {
   beforeEach(async () => {
-    await browser.url("https://webdriver.io")
+    await browser.url(properties.webdriverIoUrl)
   })
 
   it("should save some screenshots", async () => {
