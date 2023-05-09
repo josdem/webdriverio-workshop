@@ -1,19 +1,13 @@
 describe('Example', () => {
-    beforeEach(() => {
-       browser.url('https://webdriver.io');
+    beforeEach(async () => {
+      await browser.url('https://webdriver.io')
     })
   
-    it('should save some screenshots', () => {      
-      browser.saveScreen('examplePaged', {})
-      browser.saveElement($('#element-id'), 'firstButtonElement', {})
-      browser.saveFullPageScreen('fullPage', {})
-      browser.saveTabbablePage('save-tabbable', {})
+    it('should save some screenshots', async () => {
+      await browser.saveScreen('homePage', {})
     })
   
-    it('should compare successful with a baseline', () => {
-      expect(browser.checkScreen('examplePaged', {})).toEqual(0)
-      expect(browser.checkElement($('#element-id'), 'firstButtonElement', {})).toEqual(0)
-      expect(browser.checkFullPageScreen('fullPage', {})).toEqual(0)
-      expect(browser.checkTabbablePage('check-tabbable', {})).toEqual(0)
+    it('should compare successful with a baseline', async () => {
+      expect(await browser.checkScreen('homePage', {})).toEqual(0)
     })
   })

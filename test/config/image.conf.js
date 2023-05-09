@@ -5,7 +5,7 @@ config.services = config.services.concat(["chromedriver"])
 
 config.services = config.services.concat([
   ['image-comparison',{
-      baselineFolder: join(process.cwd(), './baselineImages/'),
+      baselineFolder: join(process.cwd(), './baselineImages'),
       formatImageName: '{tag}-{logName}',
       screenshotPath: join(process.cwd(), './actualImages'),
       savePerInstance: true,
