@@ -17,6 +17,9 @@ jobs:
         run: npm install
       - name: Testing
         run: npx wdio run test/config/github.conf.js --spec=test/specs/geolocation.spec.js
+      - name: REST API with curl
+        run: |
+          ls ${{ github.workspace }}
       - uses: actions/upload-artifact@v3
         if: always()
         with:
