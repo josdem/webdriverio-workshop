@@ -6,8 +6,8 @@ This project shows cool features in [Webdriver.io](https://webdriver.io/) along 
 
 #### Requirements
 
-- [NodeJS](https://nodejs.org/en/) version: `v18.16.0`
-- [Chrome](https://www.google.com/chrome/) version: `113.0`
+- [NodeJS](https://nodejs.org/en/) version: `v20.10.1`
+- [Chrome](https://www.google.com/chrome/) version: `124.0`
 
 **Note:** I recommed to use [NVM](https://github.com/nvm-sh/nvm) to manage NodeJS versions
 
@@ -46,7 +46,7 @@ where `${testName}` could be:
 If you want to generate [Allure Reports](https://webdriver.io/docs/allure-reporter/)
 
 - Install allure command line: `npm install -g allure-commandline --save-dev`
-- Execute this command: `allure generate && allure open`
+- Execute this command: `allure generate --clean && allure open`
 
 #### Read this as reference
 
