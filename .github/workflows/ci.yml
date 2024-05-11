@@ -18,7 +18,8 @@ jobs:
       - name: Testing
         run: npx wdio run test/config/github.conf.js --spec=test/specs/geolocation.spec.js
       - uses: actions/upload-artifact@v3
-        if: failure()
+        if: always()
         with:
-          name: logs
-          path: logs
+          name: allure-reports
+          path: /allure-results
+          retention-days: 30
