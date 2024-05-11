@@ -1,24 +1,24 @@
 name: CI
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-        - name: Checkout
-          uses: actions/checkout@v4
-        - uses: actions/setup-node@v3
-          with:
-            node-version: 20
-        - name: Install
-          run: npm install
-        - name: Testing
-          run: npx wdio run test/config/github.conf.js --spec=test/specs/geolocation.spec.js
-        - uses: actions/upload-artifact@v3
-          if: failure()
-          with:
-            name: logs
-            path: logs
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - name: Install
+        run: npm install
+      - name: Testing
+        run: npx wdio run test/config/github.conf.js --spec=test/specs/geolocation.spec.js
+      - uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: logs
+          path: logs
