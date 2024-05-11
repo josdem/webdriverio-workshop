@@ -1,5 +1,9 @@
 name: CI
-on: [push, pull_request]
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,7 +17,7 @@ jobs:
           run: npm install
         - name: Testing
           run: npx wdio run test/config/github.conf.js --spec=test/specs/geolocation.spec.js
-        - uses: actions/upload-artifact@v1
+        - uses: actions/upload-artifact@v3
           if: failure()
           with:
             name: logs
