@@ -1,6 +1,10 @@
 const properties = require(`../properties/test.properties`)
 
 class DominosPage {
+  get carryOutTab() {
+    return $("[data-quid=Carryout-input]")
+  }
+
   get zipCodeBox() {
     return $("[data-quid=PostalCode]")
   }
@@ -14,11 +18,13 @@ class DominosPage {
   }
 
   async findStore() {
+    await this.carryOutTab.waitForDisplayed()
+    await this.carryOutTab.click()
     await this.zipCodeBox.waitForDisplayed()
-    await zipCodeBox.clearValue()
-    await zipCodeBox.setValue(properties.zipCode)
-    await expect(searchButton).toBeExisting()
-    await searchButton.click()
+    await this.zipCodeBox.clearValue()
+    await this.zipCodeBox.setValue(properties.zipCode)
+    await this.searchButton.waitForDisplayed()
+    await this.searchButton.click()
   }
 }
 
