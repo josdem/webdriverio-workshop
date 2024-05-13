@@ -2,10 +2,11 @@ module.exports = {
   url: "https://www.where-am-i.net/",
   website: "https://josdem.io/",
   serviceUrl: "https://webflux.josdem.io/",
-  amazonUrl: "https://www.amazon.com/",
+  dominosUrl: "https://www.dominos.com/en/restaurants",
   amazonSuggestionsUrl: "https://completion.amazon.com/api/2017/suggestions",
   webdriverIoUrl: "https://webdriver.io",
   searchValue: "pizza",
+  zipCode: "00000-9938",
   waitingTime: 3000,
   accuracy: 1,
   UNITED_STATES: {
