@@ -8,6 +8,7 @@ module.exports = {
   searchValue: "pizza",
   zipCode: "00000-9938",
   waitingTime: 3000,
+  performanceScore: 0.5,
   accuracy: 1,
   UNITED_STATES: {
     latitude: 42.3173603,

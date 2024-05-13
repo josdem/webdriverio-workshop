@@ -28,7 +28,6 @@
     "@wdio/spec-reporter": "^8.36.1",
     "chromedriver": "^124.0",
     "prettier": "3.2.5",
-    "wdio-chromedriver-service": "^8.1.1",
-    "wdio-intercept-service": "^4.4.1"
+    "wdio-chromedriver-service": "^8.1.1"
   }
 }
