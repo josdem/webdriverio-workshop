@@ -16,7 +16,7 @@ jobs:
       - name: Install
         run: npm install
       - name: Testing
-        run: npx wdio run test/config/github.conf.js --spec=test/specs/geolocation.spec.js
+        run: npx wdio run test/config/github.conf.js --spec=test/specs/dominos.spec.js
       - name: Printing workspace
         run: |
           ls ${{ github.workspace }}
